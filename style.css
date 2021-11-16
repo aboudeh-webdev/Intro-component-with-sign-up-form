@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  max-height: 800px;
+  background-color: var(--red);
+  font-family: 'Poppins', sans-serif;
+  background-image: url('../images/bg-intro-desktop.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.text-box {
+  width: 525px;
+  height: 220px;
+}
+
+.text-box h1 {
+  height: 131px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 55px;
+  letter-spacing: -0.520833px;
+  color: #ffffff;
+}
+
+.text-box p {
+  height: 78px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.blue-box {
+  width: 540px;
+  height: 60px;
+  background: #5e54a4;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 10px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.form-container {
+  background: #ffffff;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 35px 0px;
+  /* box-sizing: border-box; */
+  /* height: 450px; */
+  width: 540px;
+  position: relative;
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control input {
+  height: 50px;
+  width: 460px;
+  border-radius: 5px;
+  background: #ffffff;
+  border: 1px solid #5e54a4;
+  box-sizing: border-box;
+  margin-top: 20px;
+  outline: none;
+  /* position: relative; */
+}
+
+.error-message {
+  display: none;
+  text-align: right;
+  margin-right: 40px;
+  font-size: 11px;
+  font-style: italic;
+  color: hsl(0, 100%, 74%);
+  /* display: block; */
+}
+
+.error-icon {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 50px;
+}
+.form-control.error .error-icon,
+.form-control.error .error-message {
+  display: block;
+}
+.form-control.error input {
+  border: 2px solid hsl(0, 100%, 74%);
+}
+::placeholder {
+  padding-left: 20px;
+}
+
+button {
+  height: 50px;
+  width: 460px;
+  /* width: 80%; */
+  border-radius: 5px;
+  margin-top: 20px;
+  outline: none;
+  background: #38cc8b;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  cursor: pointer;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+button:focus {
+  outline: none;
+}
+
+small {
+  height: 26px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 26px;
+  /* identical to box height, or 236% */
+  text-align: center;
+  color: #bab7d4;
+}
+
+@media (max-width: 1080px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  .blue-box {
+    margin-top: 10px;
+    width: 450px;
+    /* height: 88px; */
+  }
+  .text-box {
+    width: 450px;
+    height: 226px;
+  }
+  .form-container {
+    width: 450px;
+    margin-bottom: 30px;
+  }
+  .form-control input {
+    width: 90%;
+  }
+  button {
+    width: 90%;
+  }
+  .text-box p {
+    margin-top: 2px;
+  }
+  .error-message {
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    width: 375;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .blue-box {
+    /* margin-top: 10px; */
+    width: 350px;
+    /* height: 88px; */
+  }
+  .text-box {
+    width: 350px;
+    height: 226px;
+  }
+  .form-container {
+    width: 350px;
+    margin-bottom: 30px;
+  }
+  .form-control input {
+    width: 90%;
+  }
+  button {
+    width: 90%;
+  }
+  .text-box {
+    height: 205px;
+  }
+
+  .text-box h1 {
+    height: 80px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.520833px;
+    color: #ffffff;
+  }
+  .text-box p {
+    /* margin-top: 2px; */
+    height: 100px;
+  }
+  .form-control input {
+    margin-top: 10px;
+  }
+
+  small {
+    text-align: center;
+    /* font-size:12px; */
+    color: #bab7d4;
+  }
+  small a {
+    margin-left: 60px;
+    text-align: center;
+  }
+
+  .error-icon {
+    top: 25px;
+    right: 30px;
+  }
+  .error-message {
+    margin-right: 21px;
+  }
+}
